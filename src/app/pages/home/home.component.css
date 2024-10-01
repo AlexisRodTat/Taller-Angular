@@ -1,0 +1,13 @@
+.card{
+    background-color: black;
+    width: 250px;
+    height: max-content;
+    .card-header{
+
+    }
+    .card-body{
+        .info, .title{
+            color: white;
+        }
+    }
+}
