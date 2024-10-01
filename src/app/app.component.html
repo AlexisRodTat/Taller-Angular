@@ -1,4 +1,21 @@
-<h1>Los Boxitos</h1>
-<h2>Cocina yucateca</h2>
+<div class="container">
+
+<ui-home
+image="/images/boxitoss.jpg"
+title="Restaurante boxitos"
+info="Comida yucateca"
+textbtn="Acerca de"
+[clickEvent]="acercaDe"
+/>
+
+<ui-home
+image="/images/menubox.jpg"
+title="Menu de boxitos"
+info="Precios y comida"
+textbtn="Mas info"
+[clickEvent]="masInfo"
+/>
+
+</div>
 
 <router-outlet />
