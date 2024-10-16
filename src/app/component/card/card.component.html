@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header">
+    <img [src]="[platillo.img]" alt="" class="image">
+    </div>
+
+        <div class="card-body">
+    <h2 class="title">{{platillo.name}}</h2>
+    <input id="text" type="text" class="Input" (change)="onChange($event)">
+    <p class="info">{{platillo.description}}</p>
+    <p class="infoex">{{platillo.price}}</p>
+        </div>
+
+            <div class="card-footer">
+            <button class="btn" (click)="onClick()">Ver datos</button>
+            </div> 

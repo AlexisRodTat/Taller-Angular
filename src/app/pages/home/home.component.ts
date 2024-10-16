@@ -1,22 +1,27 @@
 import { Component, Input } from '@angular/core';
+import { CardComponent } from "../../component/card/card.component";
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'ui-home',
   standalone: true,
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 
 export class HomeComponent {
-  @Input() image!:string;
-  @Input() title!:string;
-  @Input() info!:string;
-  @Input() textbtn!:string;
-  @Input() clickEvent!:() => void;
+  
+  acercaDe(){
+    alert("Somos un restorann")
+  }
 
-  onClick() {
-    this.clickEvent();
+  masInfo(){
+    alert("Aqui ves los precios")
+  }
+
+  goProducts(){
+    window.location.href='./products'
   }
 
 }

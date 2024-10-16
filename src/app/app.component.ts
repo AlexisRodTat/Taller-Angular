@@ -9,14 +9,6 @@ import { HomeComponent } from "./pages/home/home.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  
-  acercaDe(){
-    alert("Somos un restorann")
-  }
-
-  masInfo(){
-    alert("Aqui ves los precios")
-  }
-
 }
