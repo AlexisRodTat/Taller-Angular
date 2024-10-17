@@ -1,5 +1,11 @@
 import { Component, Input, signal } from '@angular/core';
-import { Platillos } from '../../models/test';
+import { Platillos, Usuario } from '../../models/test';
+
+type Data = {
+
+  data: Usuario | Platillos 
+
+}
 
 @Component({
   selector: 'app-card',
@@ -12,15 +18,15 @@ import { Platillos } from '../../models/test';
 export class CardComponent {
   text = signal('')
 
-  @Input()platillo!:Platillos;
+  @Input() data!: Data;
   @Input() clickEvent!:() => void;
 
   onChange(event:any){
     this.text.set(event.target.value);
-    this.platillo.description = this.text();
+    this.data.data.description = this.text();
   }
 
   onClick() {
-    console.log(this.platillo);
+    console.log(this.data.data);
   }
 }

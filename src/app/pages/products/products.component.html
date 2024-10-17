@@ -1,7 +1,9 @@
 <div class="container">
     @for (platillo of platillo; track $index) {
         <app-card
-        [platillo]="platillo"
+        [data]="{
+            data: platillo
+        }"
         />
     }
 </div>

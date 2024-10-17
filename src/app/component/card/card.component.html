@@ -1,13 +1,22 @@
 <div class="card">
+
+    @if (data.data.img) {
+
     <div class="card-header">
-    <img [src]="[platillo.img]" alt="" class="image">
+    <img [src]="[data.data.img]" alt="" class="image">
     </div>
 
+    }
+
         <div class="card-body">
-    <h2 class="title">{{platillo.name}}</h2>
+    <h2 class="title">{{data.data.name}}</h2>
     <input id="text" type="text" class="Input" (change)="onChange($event)">
-    <p class="info">{{platillo.description}}</p>
-    <p class="infoex">{{platillo.price}}</p>
+    <p class="info">{{data.data.description}}</p>
+
+    @if (data.data.price) {  
+
+        <p class="infoex">{{data.data.price}}</p>
+        }
         </div>
 
             <div class="card-footer">

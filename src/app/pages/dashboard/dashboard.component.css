@@ -1,0 +1,29 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--greens);
+    gap: 100px;
+}
+
+
+.admin {
+    width: 250px;
+    height: 450px;
+    background-color: var(--greenf);
+    border-radius: 14px;
+    text-align: center;
+    height: 20vh;
+    width: 10vw;
+}
+
+.mesero {
+    width: 250px;
+    height: 450px;
+    background-color: var(--greenp);
+    border-radius: 14px;
+    text-align: center;
+    height: 20vh;
+    width: 10vw;
+}
