@@ -9,15 +9,47 @@
     gap: 18px; /*pega y despega las cards o los elementos que separemos*/
 }
 
-.btn{
-    padding: 5px 10px;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: var(--greenq);
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    &:active{
-        background-color: green;
+
+.box{
+    background-color: var(--greenr);
+    padding: 10px;
+    border-radius: 10px;
+    h3{
+        font-size: 1.5rem;
+        font-weight: 250;
+        text-align: center;
+    }
+    input{
+        width: 97%;
+        border-radius: 10px;
+        padding: 5px;
+        height: 30px;
+        border: none;
+        background-color: var(--greenq);
+        margin-bottom: 25px;
+        font-size: 1rem;
+    }
+
+    /*&.first{
+        margin-bottom: 25px;
+    }*/
+
+    label{
+        margin-left: 5px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .controllers{
+        display: flex;
+        justify-content: center;
+    }
+
+    button{
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 12px;
+        padding: 15px 10px;
+        background-color: var(--greenq);
     }
 }

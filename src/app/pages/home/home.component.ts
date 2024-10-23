@@ -1,27 +1,33 @@
-import { Component, Input } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CardComponent } from "../../component/card/card.component";
 import { AppComponent } from '../../app.component';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'ui-home',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 
 export class HomeComponent {
+  email:string = '';
+  password:string = '';
+
   
-  acercaDe(){
-    alert("Somos un restorann")
-  }
+  login(user: string, password: string){
+      //user es un usuario, correo, etc
+      //1 = 1 true
+      // SELECT user, password FROM user WHERE user = @user & password = @password
+      //if (user == '1 = 1' || password == '1 = 1'){
+        //aplicar logica
+        //return false;
+      //}
 
-  masInfo(){
-    alert("Aqui ves los precios")
-  }
-
-  goProducts(){
-    window.location.href='./products'
+      //llamar la API
+      console.log(`User: ${user}, Password: ${password}`);
   }
 
 }

@@ -1,3 +1,12 @@
 <div class="container">
-    <button class="btn" (click) = 'goProducts()'>Ver productos</button>
+    <div class="box">
+        <h3>Los boxitos</h3>
+        <label for="email">Email</label>
+        <input type="email" placeholder="tucorreo@gmail.com"  name="email" id="email" [(ngModel)] = "email">
+        <label for="Password">Password</label>
+        <input type="password" placeholder="password" name="password" id="password" [(ngModel)] = "password">
+        <div class="controllers">
+            <button (click)="login(email, password)">login</button>
+        </div>
+    </div>
 </div>
