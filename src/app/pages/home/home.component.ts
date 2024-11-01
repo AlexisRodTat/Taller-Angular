@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { CardComponent } from "../../component/card/card.component";
 import { AppComponent } from '../../app.component';
 import { FormsModule } from '@angular/forms';
+import { ReqresApiService } from '../../service/reqres-api.service';
 
 
 @Component({
@@ -16,18 +17,20 @@ export class HomeComponent {
   email:string = '';
   password:string = '';
 
+  constructor(private apiReqres:ReqresApiService){}
+
   
   login(user: string, password: string){
-      //user es un usuario, correo, etc
-      //1 = 1 true
-      // SELECT user, password FROM user WHERE user = @user & password = @password
-      //if (user == '1 = 1' || password == '1 = 1'){
-        //aplicar logica
-        //return false;
-      //}
-
-      //llamar la API
       console.log(`User: ${user}, Password: ${password}`);
+
+      this.apiReqres.login(user, password).subscribe(
+        res => {
+          alert('login succesfully: ' + res.token);
+        }, 
+        err => {
+          alert(err.error.error);
+        }
+      )
   }
 
 }
